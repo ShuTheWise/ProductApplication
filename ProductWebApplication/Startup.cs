@@ -32,7 +32,6 @@ namespace ProductWebApplication
             });
 
             services.AddSingleton<IProductRepository, ProductRepository>();
-            services.AddSingleton<ProductsController>();
             services.AddSingleton<IDatabaseAccess>(new SqlDatabaseAccess(Configuration.GetConnectionString("ProductDB")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
